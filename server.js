@@ -78,7 +78,7 @@ Routes.route("/addPatient").post((req, res) => {
 	patient
 		.save()
 		.then(patient => {
-			res.status(200).json({ patient: "Patient erfolgreich hinzugefügt" });
+			res.status(200).send("Patient erfolgreich hinzugefügt");
 		})
 		.catch(err => {
 			res.status(400).send("Hinzufügen ist fehlgeschlagen");
